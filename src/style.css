@@ -58,96 +58,96 @@ body {
 /* End of title stylings */
 
 /* Header stylings */
+/* Header */
 .header {
-  position: sticky;
   width: 100%;
-  left: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  font-family: "Poppins", sans-serif;
+  position: sticky;
   top: 0;
-  background-color: var(--color-white);
-  z-index: 100000000;
+  z-index: 1000;
 }
 
 .header-top {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-}
-
-@media screen and (max-width: 37.5em) {
-  .header-top {
-    display: none;
-  }
-}
-
-.header-contact {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.header-contact-icon {
-  --header-contact-icon-size: 6rem;
-  width: var(--header-contact-icon-size);
-  height: var(--header-contact-icon-size);
-  background: linear-gradient(
-    to right,
-    var(--color-primary),
-    var(--color-primary-dark)
-  );
-  color: var(--color-white);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-contact-text {
-  font-size: 1.4rem;
-  font-weight: 500;
-}
-
-.header-contact-text a {
-  color: var(--color-black);
-  text-decoration: underline;
-}
-
-.header-contact-text a:hover {
-  color: var(--color-primary-dark);
+  padding: 0.8rem 4rem;
+  border-bottom: 1px solid #eee;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 10px;
 }
 
 .logo-text {
-  text-transform: capitalize;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-contact-text a {
+  color: #444;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-contact-text a:hover {
+  color: #0a7d62; /* Urban Haven green accent */
+}
+
+.header-contact-icon i {
+  color: #0a7d62;
+  font-size: 1rem;
+}
+
+/* Navigation */
+.header-bottom {
+  padding: 0.5rem 4rem;
 }
 
 .nav-list {
-  border: 1px solid var(--color-black);
-  padding: 1rem;
-  list-style: none;
   display: flex;
+  gap: 2rem;
+  list-style: none;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 3rem;
 }
 
 .nav-list-item-link {
   text-transform: uppercase;
-  font-size: 1.4rem;
-  color: var(--color-black);
+  font-size: 0.95rem;
   font-weight: 600;
-  transition: all 0.5s;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .nav-list-item-link:hover {
-  color: var(--color-primary);
+  color: #0a7d62;
+  border-bottom: 2px solid #0a7d62;
+  padding-bottom: 4px;
 }
+
+/* Scroll effect */
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
 /* End of Header stylings */
 
 /* Hero section stylings */
