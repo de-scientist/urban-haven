@@ -955,28 +955,38 @@
   <div class="faq-list">
 
     <div class="faq-item">
-      <h4>What services do you offer?</h4>
-      <p>We provide horse training, grooming, veterinary services, feeding programs, sanctuary care, and digital tracking for horse health.</p>
+      <button class="faq-question">What types of apartments do you offer?</button>
+      <div class="faq-answer">
+        <p>We provide a wide range of living spaces including single rooms, bedsitters, studio apartments, one-bedroom, two-bedroom, and self-contained apartments.</p>
+      </div>
     </div>
 
     <div class="faq-item">
-      <h4>Do you train beginners?</h4>
-      <p>Yes! We welcome both new and experienced riders. Our training programs are tailored to meet your skill level and goals.</p>
+      <button class="faq-question">What amenities are included?</button>
+      <div class="faq-answer">
+        <p>Residents enjoy free WiFi, parking, water, access to a gym, swimming pool, elevators, and a community theatre. Some amenities vary by room type.</p>
+      </div>
     </div>
 
     <div class="faq-item">
-      <h4>Where are you located?</h4>
-      <p>We are based in Murang’a, Kenya, and serve clients across the region.</p>
+      <button class="faq-question">Where are you located?</button>
+      <div class="faq-answer">
+        <p>Urban Haven Apartments are located in Kiharu, Murang’a, offering easy access to key amenities within the town.</p>
+      </div>
     </div>
 
     <div class="faq-item">
-      <h4>How can I support the sanctuary?</h4>
-      <p>You can contribute through donations, volunteering, or sponsoring a horse in need. Every contribution helps us give horses a second chance at life.</p>
+      <button class="faq-question">What is the rent payment process?</button>
+      <div class="faq-answer">
+        <p>Rent is paid monthly. Details on payment methods will be provided when you move in or inquire through our contact channels.</p>
+      </div>
     </div>
 
     <div class="faq-item">
-      <h4>How do I book a service?</h4>
-      <p>You can reach us through our contact form, WhatsApp, or by calling directly. Online booking options will also be available soon.</p>
+      <button class="faq-question">How do I book a viewing?</button>
+      <div class="faq-answer">
+        <p>You can book a viewing by filling out our contact form, calling us at +254718764327, or emailing us at urhaven@apartments.com.</p>
+      </div>
     </div>
 
   </div>
@@ -1058,6 +1068,26 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     });
 });
 
+const faqButtons = document.querySelectorAll(".faq-question");
+
+faqButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const answer = button.nextElementSibling;
+    button.classList.toggle("active");
+
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+    } else {
+      // Close others
+      document.querySelectorAll(".faq-answer").forEach(ans => ans.style.display = "none");
+      document.querySelectorAll(".faq-question").forEach(btn => btn.classList.remove("active"));
+
+      // Open current
+      button.classList.add("active");
+      answer.style.display = "block";
+    }
+  });
+});
     </script>
     <!--End of script-->
 
