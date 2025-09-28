@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horse Club</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./src/images/horse.png" />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <!-- email address -->
+        <div class="header-contact">
+          <span class="header-contact-icon">
+            <i class="fa-solid fa-paper-plane"></i>
+          </span>
+          <p class="header-contact-text"> 
+            <a href="javascript:void(0)" onclick="smartEmail()">Send us an Email</a>
+          </p>
+        </div>
+        <!-- end of email address -->
+
+        <!-- logo -->
+        <div class="logo">
+          <img src="./src/images/horse.png" alt="logo" width="40px" />
+          <p class="logo-text">horse club</p>
+        </div>
+        <!-- end of logo -->
+
+        <!-- Phone Number -->
+        <div class="header-contact">
+          <p class="header-contact-text"> <a href="tel:+254 729 934 671">Call Us</a></p>
+          <span class="header-contact-icon">
+            <i class="fa-solid fa-phone"></i>
+          </span>
+        </div>
+        <!-- End of Phone Number -->
+      </div>
+      <div class="header-bottom">
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="#home" class="nav-list-item-link">home</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#about" class="nav-list-item-link">about us</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#services" class="nav-list-item-link">services</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#reasons" class="nav-list-item-link">why us</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#team" class="nav-list-item-link">team</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#blog" class="nav-list-item-link">blog</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#testimonial" class="nav-list-item-link">testimonial</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#gallery" class="nav-list-item-link">gallery</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#contact" class="nav-list-item-link">contact us</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#faq" class="nav-list-item-link">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero-section" id="home">
+      <div class="hero-textbox">
+        <p class="hero-textbox-paragraph">
+          Introducing Horse Club – Where Passion Meets Care
+        </p>
+        <h1 class="hero-textbox-heading">
+          At Horse Club, we believe in building a strong bond between horses and
+          riders. Based in Murang’a, Kenya, we provide professional horse care,
+          training, and support that ensures your horse is healthy, happy, and
+          thriving.
+        </h1>
+        <a
+          href="https://github.com/de-scientist/"
+          target="_blank"
+          class="hero-textbox-cta"
+          >learn more</a
+        >
+      </div>
+    </section>
+    <!-- End of hero section -->
+
+    <!-- About section -->
+    <section class="about-section" id="about">
+      <div class="about-textbox">
+        <p class="about-text-subtitle">
+          We are here to take care of your horses
+        </p>
+        <h2 class="about-title">
+          we are your horses' best friend now and forever
+        </h2>
+        <p class="about-description">
+          We are dedicated to nurturing horses with excellence. From health to
+          grooming, training to feeding, Horse Club is your trusted partner. Our
+          mission is to deliver reliable, affordable, and compassionate services
+          to horse lovers across Kenya.
+        </p>
+        <a href="https://github.com/codeme254" target="_blank" class="about-cta"
+          >get started now</a
+        >
+      </div>
+      <div class="about-img-wrapper">
+        <img
+          src="./src/images/about-img.jpg"
+          alt="horse running"
+          class="about-img-image"
+        />
+      </div>
+    </section>
+    <!-- End of the about section -->
+
+    <!-- Services section -->
+    <section class="services-section" id="services">
+      <div class="title">
+        <p class="title-sub">some of the things we offer</p>
+        <h2 class="title-main">our services</h2>
+      </div>
+      <div class="services-container">
+        <!-- service card 1 -->
+        <div class="service-card">
+          <div class="service-card-img-wrapper">
+            <img
+              src="./src/images/service-vet.png"
+              alt="veterinary services"
+              class="service-image"
+            />
+          </div>
+          <h3 class="service-title">veterinary service</h3>
+          <p class="service-description">
+            Comprehensive veterinary care delivered by certified equine
+            veterinarians. From routine wellness checks and vaccinations to
+            emergency interventions, we ensure your horse gets the medical
+            attention it deserves — with compassion, precision, and cutting-edge
+            diagnostics.
+          </p>
+        </div>
+        <!-- end of service card 1 -->
+        <!-- service card 2 -->
+        <div class="service-card">
+          <div class="service-card-img-wrapper">
+            <img
+              src="./src/images/service-horse-grooming.png"
+              alt="horse grooming"
+              class="service-image"
+            />
+          </div>
+          <h3 class="service-title">horse grooming</h3>
+          <p class="service-description">
+            Luxurious grooming and coat care for your equine companion. We use
+            premium brushes, safe grooming products, and gentle techniques to
+            clean, trim mane & tail, and pamper your horse so it looks and feels
+            its best.
+          </p>
+        </div>
+        <!-- end of service card 2 -->
+        <!-- service card 3 -->
+        <div class="service-card">
+          <div class="service-card-img-wrapper">
+            <img
+              src="./src/images/service-horse-training.png"
+              alt="horse training"
+              class="service-image"
+            />
+          </div>
+          <h3 class="service-title">horse training</h3>
+          <p class="service-description">
+            Structured training programs tailored to your horse’s temperament
+            and your goals — be it competition, riding confidence, or
+            behavioural improvement. Our experienced trainers use positive
+            reinforcement, consistent routines, and behavioral science to create
+            harmony.
+          </p>
+        </div>
+        <!-- end of service card 3 -->
+        <!-- service card 4 -->
+        <div class="service-card">
+          <div class="service-card-img-wrapper">
+            <img
+              src="./src/images/service-horse-feeding.png"
+              alt="horse feeding"
+              class="service-image"
+            />
+          </div>
+          <h3 class="service-title">horse feeding</h3>
+          <p class="service-description">
+            Customized nutrition plans to match age, workload, and health
+            condition. We use high-quality feeds, supplements, and seasonal
+            adjustments to optimize digestion and performance in every horse.
+          </p>
+        </div>
+        <!-- end of service card 4 -->
+        <!-- service card 5 -->
+        <div class="service-card">
+          <div class="service-card-img-wrapper">
+            <img
+              src="./src/images/service-horse-santuary.png"
+              alt="sanctuary for horses"
+              class="service-image"
+            />
+          </div>
+          <h3 class="service-title">Sanctuary for horses</h3>
+          <p class="service-description">
+            Safe haven for retired, rescued, or rehabilitating horses. Our
+            spacious paddocks, dedicated care teams, and compassionate
+            philosophy ensure every horse lives out its days in comfort,
+            dignity, and peace.
+          </p>
+        </div>
+        <!-- end of service card 5 -->
+        <!-- service card 6 -->
+        <div class="service-card">
+          <div class="service-card-img-wrapper">
+            <img
+              src="./src/images/service-horse-tracking.png"
+              alt="digital tracking"
+              class="service-image"
+            />
+          </div>
+          <h3 class="service-title">digital tracking</h3>
+          <p class="service-description">
+            Harness technology with our digital tracking system — GPS, health
+            monitoring, activity logs — so you stay informed about your horse’s
+            location, behavior, and wellness, wherever you are.
+          </p>
+        </div>
+        <!-- end of service card 6 -->
+      </div>
+    </section>
+    <!-- End of services section -->
+
+    <!-- Reasons section -->
+    <section class="reasons-section" id="reasons">
+      <div class="reason">
+        <h3 class="reason-title">expert technicians</h3>
+        <p class="reason-description">
+          Our team is composed of certified equine professionals — vets,
+          trainers, groomers — with years of specialized experience. They
+          understand horse behavior, health, and care inside out.
+        </p>
+      </div>
+      <div class="reason">
+        <h3 class="reason-title">professional advice</h3>
+        <p class="reason-description">
+          We don’t guess. We consult research, diagnostics, and real data to
+          guide each recommendation.
+        </p>
+      </div>
+      <div class="reason">
+        <h3 class="reason-title">great support</h3>
+        <p class="reason-description">
+          24/7 helpline, on-site visits, and fast response times — we stay by
+          your side.
+        </p>
+      </div>
+      <div class="reason">
+        <h3 class="reason-title">technical skills</h3>
+        <p class="reason-description">
+          Continuous training for our staff ensures we use the latest in equine
+          science and technology.
+        </p>
+      </div>
+      <div class="reason">
+        <h3 class="reason-title">highly recommended</h3>
+        <p class="reason-description">
+          Trusted by horse owners, riding schools, and equestrian communities
+          across [Murang'a, Kenya].
+        </p>
+      </div>
+      <div class="reason">
+        <h3 class="reason-title">positive reviews</h3>
+        <p class="reason-description">
+          Hear from our satisfied clients — real stories from riders, trainers,
+          and horse lovers.
+        </p>
+      </div>
+    </section>
+    <!-- End of reasons section -->
+
+    <!-- Team section -->
+    <section class="team-section" id="team">
+      <div class="title">
+        <p class="title-sub">team</p>
+        <h2 class="title-main">our team</h2>
+      </div>
+      <div class="team-members-container">
+        <!-- team member card -->
+        <div class="team-member-card">
+          <div class="team-member-image-wrapper">
+            <img
+              src="./src/images/me.jpg"
+              alt="A head-shot of Mark"
+              class="team-member-image"
+            />
+          </div>
+          <div class="team-member-information">
+            <h3 class="team-member-name">Mark Kinyanjui</h3>
+            <p class="team-member-position">
+              Founder & CEO. An advocate for animal welfare and oversees
+              operations and champions our mission to raise standards of horse
+              care.
+            </p>
+            <div class="team-member-socials">
+              <a
+                href="https://www.instagram.com/gitau6732/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://x.com/GitauMark1"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100072778362304"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://github.com/de-scientist/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end of team member card -->
+        <!-- team member card -->
+        <div class="team-member-card">
+          <div class="team-member-image-wrapper">
+            <img
+              src="./src/images/bro.jpeg"
+              alt="A head-shot of irene"
+              class="team-member-image"
+            />
+          </div>
+          <div class="team-member-information">
+            <h3 class="team-member-name">Kennedy Nyoike</h3>
+            <p class="team-member-position">
+              Head Groomer. With 10+ years’ experience in show stables, Ken’s
+              attention to detail ensures every horse shines.
+            </p>
+            <div class="team-member-socials">
+              <a
+                href="https://www.instagram.com/gitau6732/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://x.com/GitauMark1"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100072778362304"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://github.com/de-scientist/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end of team member card -->
+        <!-- team member card -->
+        <div class="team-member-card">
+          <div class="team-member-image-wrapper">
+            <img
+              src="./src/images/staff-babra.jpg"
+              alt="A head-shot of Babra"
+              class="team-member-image"
+            />
+          </div>
+          <div class="team-member-information">
+            <h3 class="team-member-name">Babra obare</h3>
+            <p class="team-member-position">
+              IT & Digital Officer. She manages our booking platform, digital
+              tracking systems, and keeps our online presence smooth.
+            </p>
+            <div class="team-member-socials">
+              <a
+                href="https://www.instagram.com/gitau6732/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://x.com/GitauMark1"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100072778362304"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://github.com/de-scientist/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end of team member card -->
+        <!-- team member card -->
+        <div class="team-member-card">
+          <div class="team-member-image-wrapper">
+            <img
+              src="./src/images/staff-george.jpg"
+              alt="A head-shot of Fleeky"
+              class="team-member-image"
+            />
+          </div>
+          <div class="team-member-information">
+            <h3 class="team-member-name">Fleeky George</h3>
+            <p class="team-member-position">
+              Lead Trainer. Specializes in dressage, jumping, and behavioural
+              conditioning. Fleeky brings patience, insight, and discipline to
+              each horse.
+            </p>
+            <div class="team-member-socials">
+              <a
+                href="https://www.instagram.com/gitau6732/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://x.com/GitauMark1"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100072778362304"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://github.com/de-scientist/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end of team member card -->
+        <!-- team member card -->
+        <div class="team-member-card">
+          <div class="team-member-image-wrapper">
+            <img
+              src="./src/images/staff-linnet.jpg"
+              alt="A head-shot of Linet"
+              class="team-member-image"
+            />
+          </div>
+          <div class="team-member-information">
+            <h3 class="team-member-name">Linnet Wanjiku</h3>
+            <p class="team-member-position">
+              HR & Community Liaison. Keeps staff morale high and builds bridges
+              with our community of riders.
+            </p>
+            <div class="team-member-socials">
+              <a
+                href="https://www.instagram.com/gitau6732/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://x.com/GitauMark1"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100072778362304"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://github.com/de-scientist/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end of team member card -->
+        <!-- team member card -->
+        <div class="team-member-card">
+          <div class="team-member-image-wrapper">
+            <img
+              src="./src/images/staff-joshua.jpg"
+              alt="A head-shot of joshua"
+              class="team-member-image"
+            />
+          </div>
+          <div class="team-member-information">
+            <h3 class="team-member-name">Joshua kimani</h3>
+            <p class="team-member-position">
+              Sanctuary Manager. Leads care for resident and rescued horses,
+              ensures daily welfare and enrichment.
+            </p>
+            <div class="team-member-socials">
+              <a
+                href="https://www.instagram.com/gitau6732/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://x.com/GitauMark1"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100072778362304"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://github.com/de-scientist/"
+                target="_blank"
+                class="team-member-social-url"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end of team member card -->
+      </div>
+    </section>
+    <!-- End of team section -->
+
+    <!-- Blog section -->
+    <section class="blog-section" id="blog">
+      <div class="title">
+        <p class="title-sub">latest from our blog</p>
+        <h2 class="title-main">our blog</h2>
+      </div>
+      <div class="blog-cards-container">
+        <!-- Blog card -->
+        <div class="blog-card">
+          <div class="blog-card-img-wrapper">
+            <img
+              src="./src/images/blog-img-1.jpg"
+              alt="featured image"
+              class="blog-card-featured-image"
+            />
+          </div>
+          <div class="blog-card-chips-container">
+            <a href="#" class="blog-card-chip">travel</a>
+            <a href="#" class="blog-card-chip">lifestyle</a>
+          </div>
+          <a href="#" class="blog-card-title">
+            <h3 class="blog-card-title-title">The Importance of Proper Horse Nutrition in Kenya</h3>
+          </a>
+          <p class="blog-synopsis">
+            Nutrition is the backbone of a horse’s health and performance. In Kenya’s diverse climate, horses require a balanced diet of hay, grains, and mineral supplements. At Horse Club, we design feeding programs that strengthen muscles, boost immunity, and improve energy levels. A well-fed horse is not only healthier but also happier, more active, and better prepared for training.
+          </p>
+          <div class="blog-card-meta-information">
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-calendar-days"></i>
+              <p>31<sup>st</sup> September 2025</p>
+            </div>
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-user"></i>
+              <a href="#">jane Shiru</a>
+            </div>
+          </div>
+        </div>
+        <!-- End of blog card -->
+        <!-- Blog card -->
+        <div class="blog-card">
+          <div class="blog-card-img-wrapper">
+            <img
+              src="./src/images/blog-img-2.jpg"
+              alt="featured image"
+              class="blog-card-featured-image"
+            />
+          </div>
+          <div class="blog-card-chips-container">
+            <a href="#" class="blog-card-chip">travel</a>
+            <a href="#" class="blog-card-chip">lifestyle</a>
+            <a href="#" class="blog-card-chip">animals</a>
+            <a href="#" class="blog-card-chip">accomodation</a>
+          </div>
+          <a href="#" class="blog-card-title">
+            <h3 class="blog-card-title-title">
+              Top 5 Horse Grooming Tips for Healthy Skin & Coat
+            </h3>
+          </a>
+          <p class="blog-synopsis">
+            Grooming goes beyond keeping a horse clean — it builds trust and comfort between horse and handler. Here are 5 key tips:
+            <ol class="blog-synopsis-ol">
+              <li>Brush daily to remove dust and loose hair.</li>
+              <li>Check hooves for stones or cracks.</li>
+              <li>Use natural oils for a shiny coat.</li>
+              <li>Trim manes and tails to prevent tangling.</li>
+              <li>Watch for skin infections like rain rot.</li>
+            </ol>
+           <p class="blog-synopsis">At Horse Club, our professional grooming keeps your horse looking sharp and feeling comfortable.</p> 
+          </p>
+          <div class="blog-card-meta-information">
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-calendar-days"></i>
+              <p>30<sup>th</sup> September 2025</p>
+            </div>
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-user"></i>
+              <a href="#">Denny Ndegwa</a>
+            </div>
+          </div>
+        </div>
+        <!-- End of blog card -->
+        <!-- Blog card -->
+        <div class="blog-card">
+          <div class="blog-card-img-wrapper">
+            <img
+              src="./src/images/blog-img-3.jpg"
+              alt="featured image"
+              class="blog-card-featured-image"
+            />
+          </div>
+          <div class="blog-card-chips-container">
+            <a href="#" class="blog-card-chip">travel</a>
+            <a href="#" class="blog-card-chip">lifestyle</a>
+            <a href="#" class="blog-card-chip">accommodation</a>
+          </div>
+          <a href="#" class="blog-card-title">
+            <h3 class="blog-card-title-title">Why Training Builds Trust Between Rider and Horse</h3>
+          </a>
+          <p class="blog-synopsis">
+           Training isn’t just about performance — it’s about communication. A horse that’s well-trained responds calmly and confidently to its rider. We use progressive training techniques that emphasize patience, respect, and reward. This approach reduces stress, prevents accidents, and strengthens the bond between horse and rider. Whether for sport, leisure, or therapy, training is key to harmony.
+          </p>
+          <div class="blog-card-meta-information">
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-calendar-days"></i>
+              <p>28<sup>th</sup> September 2025</p>
+            </div>
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-user"></i>
+              <a href="#">Joan Shii</a>
+            </div>
+          </div>
+        </div>
+        <!-- End of blog card -->
+        <!-- Blog card -->
+        <div class="blog-card">
+          <div class="blog-card-img-wrapper">
+            <img
+              src="./src/images/blog-img-4.jpg"
+              alt="featured image"
+              class="blog-card-featured-image"
+            />
+          </div>
+          <div class="blog-card-chips-container">
+            <a href="#" class="blog-card-chip">accommodation</a>
+          </div>
+          <a href="#" class="blog-card-title">
+            <h3 class="blog-card-title-title">
+              Horse Sanctuary: Giving Horses a Second Chance at Life
+            </h3>
+          </a>
+          <p class="blog-synopsis">
+           Many horses are abandoned or neglected due to illness, old age, or financial strain. At our sanctuary in Murang’a, we provide these horses with shelter, food, and medical care. Our mission is to restore their dignity and offer them peace in a loving environment. Supporting our sanctuary means giving a horse another chance to live with freedom and care.
+          </p>
+          <div class="blog-card-meta-information">
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-calendar-days"></i>
+              <p>27<sup>st</sup> September 2025</p>
+            </div>
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-user"></i>
+              <a href="#">Hildah Mwihaki</a>
+            </div>
+          </div>
+        </div>
+        <!-- End of blog card -->
+        <!-- Blog card -->
+        <div class="blog-card">
+          <div class="blog-card-img-wrapper">
+            <img
+              src="./src/images/blog-img-5.jpg"
+              alt="featured image"
+              class="blog-card-featured-image"
+            />
+          </div>
+          <div class="blog-card-chips-container">
+            <a href="#" class="blog-card-chip">lifestyle</a>
+            <a href="#" class="blog-card-chip">animals</a>
+          </div>
+          <a href="#" class="blog-card-title">
+            <h3 class="blog-card-title-title">
+              How to Build a Strong Bond with Your Horse
+            </h3>
+          </a>
+          <p class="blog-synopsis">
+          A horse is more than a riding partner — it’s a companion that thrives on trust and respect. Building a strong bond requires patience, consistency, and kindness. Spend time grooming, walking, and talking to your horse outside of training sessions. Learn its moods, reward good behavior, and always handle with gentleness. At Horse Club in Murang’a, we emphasize relationship-building in all our training programs, because a bonded horse is calmer, more responsive, and more loyal.
+          </p>
+          <div class="blog-card-meta-information">
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-calendar-days"></i>
+              <p>26<sup>th</sup> September 2025</p>
+            </div>
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-user"></i>
+              <a href="#">Isaac Gitau</a>
+            </div>
+          </div>
+        </div>
+        <!-- End of blog card -->
+        <!-- Blog card -->
+        <div class="blog-card">
+          <div class="blog-card-img-wrapper">
+            <img
+              src="./src/images/blog-img-6.jpg"
+              alt="featured image"
+              class="blog-card-featured-image"
+            />
+          </div>
+          <div class="blog-card-chips-container">
+            <a href="#" class="blog-card-chip">lifestyle</a>
+            <a href="#" class="blog-card-chip">animals</a>
+            <a href="#" class="blog-card-chip">accommodation</a>
+          </div>
+          <a href="#" class="blog-card-title">
+            <h3 class="blog-card-title-title">The Growing Horse Culture in Kenya</h3>
+          </a>
+          <p class="blog-synopsis">
+            Over the last decade, horse riding has grown from a niche activity to a vibrant culture across Kenya. From competitive sports and leisure riding to therapy programs and farm work, horses are becoming part of daily life for many families. At Horse Club, we are proud to be part of this cultural shift, providing expert training, care, and sanctuary services that nurture both horses and riders. With Murang’a becoming a hub for equine enthusiasts, the future of horse culture in Kenya has never been brighter.
+          </p>
+          <div class="blog-card-meta-information">
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-calendar-days"></i>
+              <p>25<sup>th</sup> September 2025</p>
+            </div>
+            <div class="blog-card-meta">
+              <i class="fa-solid fa-user"></i>
+              <a href="#">Rita Waithera</a>
+            </div>
+          </div>
+        </div>
+        <!-- End of blog card -->
+      </div>
+    </section>
+    <!-- End of blog section -->
+
+   <!--Start Testimonial section-->
+   <section id="testimonial" class="testimonial-section">
+    <h2 class="title-sub">What Our Community Says</h2>
+    <div class="testimonial-cards">
+     
+       <div class="testimonial">
+         <img src="./src/images/staff-linnet.jpg" alt="Grace M. - Rider" class="testimonial-img" />
+         <div class="testimonial-content">
+        <p class="testimonial-text">
+        "Horse Club has been a game-changer for my riding journey. Their training programs helped me build confidence and trust with my horse. I can now ride with ease and joy.”
+        </p>
+        <h4>
+         — Grace M., Rider
+        </h4>
+        </div>
+       </div>
+
+        <div class="testimonial">
+           <img src="./src/images/staff-babra.jpg" alt="Grace M. - Rider" class="testimonial-img" />
+         <div class="testimonial-content">
+        <p class="testimonial-text">
+        "As a parent, I wanted a safe environment where my children could interact with horses. Horse Club provided exactly that — professional care, guidance, and a warm atmosphere.”
+        </p>
+        <h4>
+        — Mary W., Parent
+        </h4>
+         </div>
+       </div>
+
+        <div class="testimonial">
+           <img src="./src/images/staff-joshua.jpg" alt="Grace M. - Rider" class="testimonial-img" />
+         <div class="testimonial-content">
+        <p class="testimonial-text">
+         “My horse is part of my farm work, and keeping it strong and healthy is critical. The feeding and veterinary services at Horse Club keep my horse in peak condition all year.”
+        </p>
+        <h4>
+         — Samuel W., Farmer
+        </h4>
+         </div>
+       </div>
+
+        <div class="testimonial">
+           <img src="./src/images/staff-irene.jpg" alt="Grace M. - Rider" class="testimonial-img" />
+         <div class="testimonial-content">
+        <p class="testimonial-text">
+         “The Horse Sanctuary is a true blessing. I’ve seen neglected horses find peace and love here. Supporting this cause has been one of the most fulfilling things I’ve done.”
+        </p>
+        <h4>
+         — Irene N., Sanctuary Supporter
+        </h4>
+         </div>
+       </div>
+    </div>
+   </section>
+   <!--End of Testimonial section-->
+
+<!--Start of Gallery-Section-->
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+  <h2>Our Gallery</h2>
+  <div class="gallery-grid">
+    <a href="images/gallery/horse1.jpg" class="gallery-item">
+      <img src="./src/images/rider.jpg" alt="Horse riding session" />
+    </a>
+    <a href="images/gallery/horse2.jpg" class="gallery-item">
+      <img src="./src/images/feeding.jpg" alt="Feeding the horse" />
+    </a>
+    <a href="images/gallery/horse3.jpg" class="gallery-item">
+      <img src="./src/images/training-session.jpg" alt="Training field in Murang'a" />
+    </a>
+    <a href="images/gallery/horse4.jpg" class="gallery-item">
+      <img src="./src/images/grooming.jpg" alt="Horse grooming session" />
+    </a>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" />
+</div>
+
+<!--End of Gallery-Section-->
+
+<!--Start of Contact-Section-->
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="contact-header">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you. Reach out to us through any of the channels below or send us a direct message.</p>
+  </div>
+
+  <!-- Contact Information -->
+  <div class="contact-info">
+    <div class="info-item">
+      <i class="fa-solid fa-phone"></i>
+      <p>+254 718 764 327</p>
+    </div>
+    <div class="info-item">
+      <i class="fa-solid fa-envelope"></i>
+      <p><a href="mailto:urhaven@apartments.com">urhaven@apartments.com</a></p>
+    </div>
+    <div class="info-item">
+      <i class="fa-brands fa-facebook"></i>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+    </div>
+    <div class="info-item">
+      <i class="fa-brands fa-instagram"></i>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <form id="contact-form" class="contact-form">
+    <div class="form-row">
+      <input type="text" name="firstName" placeholder="First Name" required>
+      <input type="text" name="lastName" placeholder="Last Name" required>
+    </div>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <textarea name="message" placeholder="Your Message..." rows="6" required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="form-status"></p>
+  </form>
+</section>
+
+<!--End of Contact-Section-->
+
+<!--Start of FAQ section-->
+<section id="faq" class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <h4>What services do you offer?</h4>
+      <p>We provide horse training, grooming, veterinary services, feeding programs, sanctuary care, and digital tracking for horse health.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Do you train beginners?</h4>
+      <p>Yes! We welcome both new and experienced riders. Our training programs are tailored to meet your skill level and goals.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Where are you located?</h4>
+      <p>We are based in Murang’a, Kenya, and serve clients across the region.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>How can I support the sanctuary?</h4>
+      <p>You can contribute through donations, volunteering, or sponsoring a horse in need. Every contribution helps us give horses a second chance at life.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>How do I book a service?</h4>
+      <p>You can reach us through our contact form, WhatsApp, or by calling directly. Online booking options will also be available soon.</p>
+    </div>
+
+  </div>
+</section>
+<!--End of FAQ section-->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-text">
+        Built with lots of &hearts; by
+        <a href="https://github.com/de-scientist/" target="_blank">Mark Kinyanjui</a>
+      </p>
+    </footer>
+    <!-- End of the footer -->
+
+    <!--Start of script-->
+    <script>
+  (function(){
+    emailjs.init("IcaDo3VicicKINrhX"); // Replace with your Public Key
+  })();
+</script>
+
+    <script>
+function smartEmail() {
+  const email = "gitaumark502@gmail.com";
+
+  //Simple check if user is on mobile
+  const isMobile = /iphone|ipad|ipod|Android/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    //open default email app
+    window.location.href = 'mailto:${email}';
+  } else {
+    // Open Gmail in browser
+    window.open('https://mail.google.com/mail/?view=cm&to=${email}', "_blank");
+  }
+}
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.lightbox .close');
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', e => {
+    e.preventDefault();
+    lightbox.style.display = 'flex';
+    lightboxImg.src = item.href;
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+});
+
+// Handle form submission
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Show loading state
+  const status = document.getElementById('form-status');
+  status.textContent = "Sending...";
+  status.style.color = "gray";
+
+  emailjs.sendForm('service_we80e3m', 'template_wu0tzs9', this)
+    .then(() => {
+      status.textContent = "✅ Message sent successfully!";
+      status.style.color = "green";
+      this.reset();
+    }, (err) => {
+      status.textContent = "❌ Failed to send message. Please try again.";
+      status.style.color = "red";
+      console.error(err);
+    });
+});
+
+    </script>
+    <!--End of script-->
+
+  </body>
+</html>
