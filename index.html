@@ -26,122 +26,154 @@
 
   </head>
   <body>
-    <header class="header">
-      <div class="header-top">
-        <!-- email address -->
-        <div class="header-contact">
-          <span class="header-contact-icon">
-            <i class="fa-solid fa-paper-plane"></i>
-          </span>
-          <p class="header-contact-text"> 
-            <a href="javascript:void(0)" onclick="smartEmail()">Send us an Email</a>
-          </p>
-        </div>
-        <!-- end of email address -->
+    <!--Start of header section-->
+   <header class="header">
+  <div class="header-top">
+    <!-- email address -->
+    <div class="header-contact">
+      <span class="header-contact-icon">
+        <i class="fa-solid fa-paper-plane"></i>
+      </span>
+      <p class="header-contact-text">
+        <a href="javascript:void(0)" onclick="smartEmail()">Send us an Email</a>
+      </p>
+    </div>
+    <!-- end of email address -->
 
-        <!-- logo -->
-        <div class="logo">
-          <img src="./src/images/horse.png" alt="logo" width="40px" />
-          <p class="logo-text">horse club</p>
-        </div>
-        <!-- end of logo -->
+    <!-- logo -->
+    <div class="logo">
+      <img src="./src/images/urban-haven-logo.png" alt="Urban Haven Logo" width="45px" />
+      <p class="logo-text">The Urban Haven</p>
+    </div>
+    <!-- end of logo -->
 
-        <!-- Phone Number -->
-        <div class="header-contact">
-          <p class="header-contact-text"> <a href="tel:+254 729 934 671">Call Us</a></p>
-          <span class="header-contact-icon">
-            <i class="fa-solid fa-phone"></i>
-          </span>
-        </div>
-        <!-- End of Phone Number -->
-      </div>
-      <div class="header-bottom">
-        <nav>
-          <ul class="nav-list">
-            <li class="nav-list-item">
-              <a href="#home" class="nav-list-item-link">home</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#about" class="nav-list-item-link">about us</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#services" class="nav-list-item-link">services</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#reasons" class="nav-list-item-link">why us</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#team" class="nav-list-item-link">team</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#blog" class="nav-list-item-link">blog</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#testimonial" class="nav-list-item-link">testimonial</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#gallery" class="nav-list-item-link">gallery</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#contact" class="nav-list-item-link">contact us</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#faq" class="nav-list-item-link">FAQ</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <!-- Phone Number -->
+    <div class="header-contact">
+      <p class="header-contact-text">
+        <a href="tel:+254729934671">Call Us</a>
+      </p>
+      <span class="header-contact-icon">
+        <i class="fa-solid fa-phone"></i>
+      </span>
+    </div>
+    <!-- End of Phone Number -->
+  </div>
+
+  <div class="header-bottom">
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-list-item"><a href="#home" class="nav-list-item-link">Home</a></li>
+        <li class="nav-list-item"><a href="#about" class="nav-list-item-link">About Us</a></li>
+        <li class="nav-list-item"><a href="#services" class="nav-list-item-link">Services</a></li>
+        <li class="nav-list-item"><a href="#reasons" class="nav-list-item-link">Why Us</a></li>
+        <li class="nav-list-item"><a href="#team" class="nav-list-item-link">Team</a></li>
+        <li class="nav-list-item"><a href="#blog" class="nav-list-item-link">Blog</a></li>
+        <li class="nav-list-item"><a href="#testimonial" class="nav-list-item-link">Testimonial</a></li>
+        <li class="nav-list-item"><a href="#gallery" class="nav-list-item-link">Gallery</a></li>
+        <li class="nav-list-item"><a href="#contact" class="nav-list-item-link">Contact Us</a></li>
+        <li class="nav-list-item"><a href="#faq" class="nav-list-item-link">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!--End of header-section-->
 
     <!-- Hero section -->
-    <section class="hero-section" id="home">
-      <div class="hero-textbox">
-        <p class="hero-textbox-paragraph">
-          Introducing Horse Club – Where Passion Meets Care
-        </p>
-        <h1 class="hero-textbox-heading">
-          At Horse Club, we believe in building a strong bond between horses and
-          riders. Based in Murang’a, Kenya, we provide professional horse care,
-          training, and support that ensures your horse is healthy, happy, and
-          thriving.
-        </h1>
-        <a
-          href="https://github.com/de-scientist/"
-          target="_blank"
-          class="hero-textbox-cta"
-          >learn more</a
-        >
-      </div>
-    </section>
+    <section class="hero-slider" id="home">
+  <div class="hero-slide active" style="background-image: url('./src/images/urban-hero1.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Welcome to Urban Haven</p>
+      <h1 class="hero-title">Modern Living, Redefined</h1>
+      <p class="hero-description">
+        Discover thoughtfully designed apartments with premium amenities 
+        and a lifestyle crafted for you.
+      </p>
+      <a href="#about" class="hero-cta">Explore Apartments</a>
+    </div>
+  </div>
+
+  <div class="hero-slide" style="background-image: url('./src/images/urban-hero2.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Your Comfort, Our Priority</p>
+      <h1 class="hero-title">Spacious Apartments for Every Lifestyle</h1>
+      <p class="hero-description">
+        From single rooms to luxury suites, find the perfect home for your journey.
+      </p>
+      <a href="#services" class="hero-cta">View Amenities</a>
+    </div>
+  </div>
+
+  <div class="hero-slide" style="background-image: url('./src/images/urban-hero3.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Join Our Community</p>
+      <h1 class="hero-title">Urban Living Made Easy</h1>
+      <p class="hero-description">
+        Experience convenience, security, and elegance in one place.
+      </p>
+      <a href="#contact" class="hero-cta">Book a Visit</a>
+    </div>
+  </div>
+
+  <!-- Navigation dots -->
+  <div class="hero-dots"></div>
+</section>
     <!-- End of hero section -->
 
     <!-- About section -->
-    <section class="about-section" id="about">
-      <div class="about-textbox">
-        <p class="about-text-subtitle">
-          We are here to take care of your horses
-        </p>
-        <h2 class="about-title">
-          we are your horses' best friend now and forever
-        </h2>
-        <p class="about-description">
-          We are dedicated to nurturing horses with excellence. From health to
-          grooming, training to feeding, Horse Club is your trusted partner. Our
-          mission is to deliver reliable, affordable, and compassionate services
-          to horse lovers across Kenya.
-        </p>
-        <a href="https://github.com/codeme254" target="_blank" class="about-cta"
-          >get started now</a
-        >
+   <!-- About Section -->
+<section class="about-section" id="about">
+  <div class="about-container">
+    <!-- Text Content -->
+    <div class="about-textbox">
+      <p class="about-text-subtitle">Welcome to Urban Haven</p>
+      <h2 class="about-title">A Place Where Lifestyle Meets Comfort</h2>
+      <p class="about-description">
+        At <strong>Urban Haven</strong>, we believe in creating spaces that 
+        inspire connection, growth, and balance. From modern housing and 
+        eco-friendly designs to vibrant community experiences, we redefine 
+        urban living for individuals, families, and businesses.  
+      </p>
+      <p class="about-description">
+        Our mission is to deliver reliable, sustainable, and innovative 
+        solutions for today’s fast-paced world while keeping people at the 
+        heart of everything we do.
+      </p>
+      <a href="#services" class="about-cta">Discover More</a>
+
+      <!-- Value Grid -->
+      <div class="about-values">
+        <div class="value-card">
+          <i class="fas fa-city value-icon"></i>
+          <h4>Sustainable Living</h4>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-users value-icon"></i>
+          <h4>Strong Community</h4>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-leaf value-icon"></i>
+          <h4>Eco-Friendly</h4>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-lightbulb value-icon"></i>
+          <h4>Innovative Design</h4>
+        </div>
       </div>
-      <div class="about-img-wrapper">
-        <img
-          src="./src/images/about-img.jpg"
-          alt="horse running"
-          class="about-img-image"
-        />
-      </div>
-    </section>
+    </div>
+
+    <!-- Image Content -->
+    <div class="about-img-wrapper">
+      <img
+        src="./src/images/urban-about.jpg"
+        alt="Modern urban community living"
+        class="about-img-image"
+      />
+    </div>
+  </div>
+</section>
     <!-- End of the about section -->
 
     <!-- Services Section -->
@@ -930,6 +962,36 @@ setInterval(() => {
   showTestimonial(index);
 }, 6000); // every 6s
 
+const slides = document.querySelectorAll(".hero-slide");
+  const dotsContainer = document.querySelector(".hero-dots");
+
+  // Create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement("span");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => showSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll(".hero-dots span");
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      dots[i].classList.remove("active");
+    });
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 6000); // 6s per slide
     </script>
     <!--End of script-->
 
