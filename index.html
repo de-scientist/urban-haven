@@ -881,19 +881,25 @@
 <!--Start of Gallery-Section-->
 <!-- Gallery Section -->
 <section id="gallery" class="gallery">
-  <h2>Our Gallery</h2>
+  <h2>Explore Our Spaces</h2>
+  <p class="gallery-subtitle">A glimpse into the modern lifestyle at Urban Haven Apartments.</p>
+
   <div class="gallery-grid">
-    <a href="images/gallery/horse1.jpg" class="gallery-item">
-      <img src="./src/images/rider.jpg" alt="Horse riding session" />
+    <a href="https://source.unsplash.com/800x600/?apartment,interior" class="gallery-item">
+      <img src="https://source.unsplash.com/400x300/?apartment,livingroom" alt="Modern Living Room" />
+      <span class="overlay">Living Room</span>
     </a>
-    <a href="images/gallery/horse2.jpg" class="gallery-item">
-      <img src="./src/images/feeding.jpg" alt="Feeding the horse" />
+    <a href="https://source.unsplash.com/800x600/?city,apartment" class="gallery-item">
+      <img src="https://source.unsplash.com/400x300/?apartment,bedroom" alt="Stylish Bedroom" />
+      <span class="overlay">Bedroom</span>
     </a>
-    <a href="images/gallery/horse3.jpg" class="gallery-item">
-      <img src="./src/images/training-session.jpg" alt="Training field in Murang'a" />
+    <a href="https://source.unsplash.com/800x600/?cityscape,balcony" class="gallery-item">
+      <img src="https://source.unsplash.com/400x300/?apartment,balcony" alt="Balcony with City View" />
+      <span class="overlay">Balcony</span>
     </a>
-    <a href="images/gallery/horse4.jpg" class="gallery-item">
-      <img src="./src/images/grooming.jpg" alt="Horse grooming session" />
+    <a href="https://source.unsplash.com/800x600/?modern,kitchen" class="gallery-item">
+      <img src="https://source.unsplash.com/400x300/?apartment,kitchen" alt="Contemporary Kitchen" />
+      <span class="overlay">Kitchen</span>
     </a>
   </div>
 </section>
@@ -902,6 +908,8 @@
 <div id="lightbox" class="lightbox">
   <span class="close">&times;</span>
   <img class="lightbox-content" id="lightbox-img" />
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
 </div>
 
 <!--End of Gallery-Section-->
@@ -910,15 +918,22 @@
 <!-- Contact Section -->
 <section id="contact" class="contact">
   <div class="contact-header">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you. Reach out to us through any of the channels below or send us a direct message.</p>
+    <h2>Get in Touch</h2>
+    <p>Interested in booking a viewing, learning more about our apartments, or making an inquiry? Reach out to us—we’re here to help you find your ideal home.</p>
+  </div>
+
+  <!-- Contact Information -->
+  <section id="contact" class="contact">
+  <div class="contact-header">
+    <h2>Get in Touch</h2>
+    <p>Interested in booking a viewing, learning more about our apartments, or making an inquiry? Reach out to us—we’re here to help you find your ideal home.</p>
   </div>
 
   <!-- Contact Information -->
   <div class="contact-info">
     <div class="info-item">
       <i class="fa-solid fa-phone"></i>
-      <p>+254 718 764 327</p>
+      <p><a href="tel:+254718764327">+254 718 764 327</a></p>
     </div>
     <div class="info-item">
       <i class="fa-solid fa-envelope"></i>
@@ -946,7 +961,6 @@
     <p id="form-status"></p>
   </form>
 </section>
-
 <!--End of Contact-Section-->
 
 <!--Start of FAQ section-->
@@ -1024,26 +1038,53 @@ function smartEmail() {
     window.open('https://mail.google.com/mail/?view=cm&to=${email}', "_blank");
   }
 }
-// Lightbox functionality
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeBtn = document.querySelector('.lightbox .close');
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".lightbox .close");
+const prevBtn = document.querySelector(".lightbox .prev");
+const nextBtn = document.querySelector(".lightbox .next");
 
-document.querySelectorAll('.gallery-item').forEach(item => {
-  item.addEventListener('click', e => {
+const galleryItems = document.querySelectorAll(".gallery-item img");
+let currentIndex = 0;
+
+// Open lightbox
+galleryItems.forEach((img, index) => {
+  img.addEventListener("click", e => {
     e.preventDefault();
-    lightbox.style.display = 'flex';
-    lightboxImg.src = item.href;
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+    currentIndex = index;
   });
 });
 
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
+// Close
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
 });
 
-lightbox.addEventListener('click', e => {
-  if (e.target === lightbox) {
-    lightbox.style.display = 'none';
+// Navigation
+function showImage(index) {
+  if (index < 0) index = galleryItems.length - 1;
+  if (index >= galleryItems.length) index = 0;
+  lightboxImg.src = galleryItems[index].src;
+  currentIndex = index;
+}
+
+prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
+nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
+
+// Swipe Support
+let startX = 0;
+lightbox.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+lightbox.addEventListener("touchend", e => {
+  let endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) {
+    showImage(currentIndex + 1); // swipe left
+  } else if (endX - startX > 50) {
+    showImage(currentIndex - 1); // swipe right
   }
 });
 
@@ -1068,26 +1109,31 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     });
 });
 
-const faqButtons = document.querySelectorAll(".faq-question");
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-faqButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const answer = button.nextElementSibling;
-    button.classList.toggle("active");
+  const form = e.target;
+  const status = document.getElementById("form-status");
 
-    if (answer.style.display === "block") {
-      answer.style.display = "none";
-    } else {
-      // Close others
-      document.querySelectorAll(".faq-answer").forEach(ans => ans.style.display = "none");
-      document.querySelectorAll(".faq-question").forEach(btn => btn.classList.remove("active"));
+  const firstName = form.firstName.value.trim();
+  const lastName = form.lastName.value.trim();
+  const email = form.email.value.trim();
+  const message = form.message.value.trim();
 
-      // Open current
-      button.classList.add("active");
-      answer.style.display = "block";
-    }
-  });
+  if (!firstName || !lastName || !email || !message) {
+    status.textContent = "❌ Please fill in all fields before submitting.";
+    status.className = "error";
+    return;
+  }
+
+  // Simulate success (replace with real backend or API later)
+  setTimeout(() => {
+    status.textContent = "✅ Thank you! Your message has been sent successfully.";
+    status.className = "success";
+    form.reset();
+  }, 600);
 });
+
     </script>
     <!--End of script-->
 
