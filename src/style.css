@@ -558,7 +558,7 @@ body {
 
 .space-icon {
   font-size: 2.2rem;
-  color: #8e44ad;
+  color: #0077b6;
   margin-bottom: 1rem;
 }
 
@@ -586,7 +586,7 @@ body {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.6rem 1.4rem;
-  background: #8e44ad;
+  background: #0077b6;
   color: #fff;
   font-weight: 600;
   font-size: 0.95rem;
@@ -596,7 +596,7 @@ body {
 }
 
 .space-btn:hover {
-  background: #732d91;
+  background: #0077b6;
   transform: translateY(-3px);
 }
 
@@ -1210,7 +1210,7 @@ body {
 
 .info-item i {
   font-size: 1.5rem;
-  color: #27ae60;
+  color: #0077b6;
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -1253,13 +1253,13 @@ body {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border: 1px solid #27ae60;
+  border: 1px solid #0077b6;
   box-shadow: 0 0 6px rgba(39, 174, 96, 0.2);
   outline: none;
 }
 
 .contact-form button {
-  background: #27ae60;
+  background: #0077b6;
   color: #fff;
   border: none;
   padding: 1rem 2rem;
@@ -1270,7 +1270,7 @@ body {
 }
 
 .contact-form button:hover {
-  background: #219150;
+  background: #0077b6;
 }
 
 #form-status {
@@ -1279,7 +1279,7 @@ body {
   font-weight: 500;
 }
 #form-status.success {
-  color: #27ae60;
+  color: #0077b6;
 }
 #form-status.error {
   color: #e74c3c;
@@ -1364,7 +1364,7 @@ body {
 }
 
 .footer-text a {
-  color: var(--color-primary);
+  color: #0077b6;
   text-decoration: underline;
 }
 

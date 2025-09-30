@@ -65,6 +65,7 @@
         <li class="nav-list-item"><a href="#home" class="nav-list-item-link">Home</a></li>
         <li class="nav-list-item"><a href="#about" class="nav-list-item-link">About Us</a></li>
         <li class="nav-list-item"><a href="#services" class="nav-list-item-link">Services</a></li>
+         <li class="nav-list-item"><a href="#spaces" class="nav-list-item-link">Spaces</a></li>
         <li class="nav-list-item"><a href="#reasons" class="nav-list-item-link">Why Us</a></li>
         <li class="nav-list-item"><a href="#team" class="nav-list-item-link">Team</a></li>
         <li class="nav-list-item"><a href="#blog" class="nav-list-item-link">Blog</a></li>
@@ -83,7 +84,7 @@
   <div class="hero-slide active" style="background-image: url('./src/images/urban-hero1.jpg');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-subtitle">Welcome to Urban Haven</p>
+      <p class="hero-subtitle">Welcome to Urban Haven located in Murang'a, Kiharu</p>
       <h1 class="hero-title">Modern Living, Redefined</h1>
       <p class="hero-description">
         Discover thoughtfully designed apartments with premium amenities 
@@ -307,10 +308,8 @@
     </div>
   </div>
 </section>
-
   <!-- End of services section -->
 
-  <!-- Available Spaces Section -->
 <!-- Available Spaces Section -->
 <section class="spaces-section" id="spaces">
   <div class="title">
@@ -501,7 +500,7 @@
         <h3 class="team-member-name">Mark Kinyanjui</h3>
         <p class="team-member-role">Founder & CEO</p>
         <p class="team-member-bio">
-          An advocate for animal welfare, Mark oversees operations and champions our mission to raise standards of horse care.
+          Visionary leader behind Urban Haven Apartments. Mark focuses on creating modern, affordable, and welcoming living spaces for all residents.
         </p>
         <div class="team-member-socials">
           <a href="https://www.instagram.com/gitau6732/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -519,9 +518,9 @@
       </div>
       <div class="team-member-information">
         <h3 class="team-member-name">Kennedy Nyoike</h3>
-        <p class="team-member-role">Head Groomer</p>
+        <p class="team-member-role">Property Manager</p>
         <p class="team-member-bio">
-          With 10+ years’ experience in show stables, Ken’s attention to detail ensures every horse shines.
+          Oversees daily operations, maintenance, and ensures residents enjoy a safe, clean, and comfortable living environment.
         </p>
         <div class="team-member-socials">
           <a href="https://www.instagram.com/gitau6732/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -541,7 +540,7 @@
         <h3 class="team-member-name">Babra Obare</h3>
         <p class="team-member-role">IT & Digital Officer</p>
         <p class="team-member-bio">
-          Manages booking platforms, digital tracking systems, and ensures a seamless online presence.
+          Handles digital bookings, online payments, and ensures Urban Haven has a strong and user-friendly digital presence.
         </p>
         <div class="team-member-socials">
           <a href="https://www.instagram.com/gitau6732/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -559,9 +558,9 @@
       </div>
       <div class="team-member-information">
         <h3 class="team-member-name">Fleeky George</h3>
-        <p class="team-member-role">Lead Trainer</p>
+        <p class="team-member-role">Leasing Officer</p>
         <p class="team-member-bio">
-          Specializes in dressage, jumping, and behavioural conditioning with patience and discipline.
+          Guides tenants through the renting process, from viewings to contracts, ensuring smooth and transparent leasing experiences.
         </p>
         <div class="team-member-socials">
           <a href="https://www.instagram.com/gitau6732/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -579,9 +578,9 @@
       </div>
       <div class="team-member-information">
         <h3 class="team-member-name">Linnet Wanjiku</h3>
-        <p class="team-member-role">HR & Community Liaison</p>
+        <p class="team-member-role">Customer Relations & HR</p>
         <p class="team-member-bio">
-          Ensures strong team morale and builds bridges with our rider community.
+          Builds strong relationships with residents, manages tenant feedback, and ensures our team delivers the best service possible.
         </p>
         <div class="team-member-socials">
           <a href="https://www.instagram.com/gitau6732/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -599,9 +598,9 @@
       </div>
       <div class="team-member-information">
         <h3 class="team-member-name">Joshua Kimani</h3>
-        <p class="team-member-role">Sanctuary Manager</p>
+        <p class="team-member-role">Facilities & Maintenance Manager</p>
         <p class="team-member-bio">
-          Oversees care for resident and rescued horses, ensuring daily welfare and enrichment.
+          Ensures all apartments and common areas are well-maintained, safe, and functional for every tenant’s comfort.
         </p>
         <div class="team-member-socials">
           <a href="https://www.instagram.com/gitau6732/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -870,7 +869,6 @@
 <!--End of Gallery-Section-->
 
 <!--Start of Contact-Section-->
-  <!-- Contact Information -->
   <section id="contact" class="contact">
   <div class="contact-header">
     <h2>Get in Touch</h2>
@@ -1089,82 +1087,45 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     form.reset();
   }, 600);
 });
+ const testimonials = document.querySelectorAll(".testimonial");
+  const dots = document.querySelectorAll(".dot");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  let currentIndex = 0;
 
-let testimonials = document.querySelectorAll(".testimonial");
-let dots = document.querySelectorAll(".dot");
-let index = 0;
-
-function showTestimonial(n) {
-  testimonials.forEach((t, i) => {
-    t.classList.remove("active");
-    dots[i].classList.remove("active");
-  });
-  testimonials[n].classList.add("active");
-  dots[n].classList.add("active");
-}
-
-document.querySelector(".next").addEventListener("click", () => {
-  index = (index + 1) % testimonials.length;
-  showTestimonial(index);
-});
-
-document.querySelector(".prev").addEventListener("click", () => {
-  index = (index - 1 + testimonials.length) % testimonials.length;
-  showTestimonial(index);
-});
-
-dots.forEach((dot, i) => {
-  dot.addEventListener("click", () => {
-    index = i;
-    showTestimonial(index);
-  });
-});
-
-// Auto-rotate
-setInterval(() => {
-  index = (index + 1) % testimonials.length;
-  showTestimonial(index);
-}, 6000); // every 6s
-
-const slides = document.querySelectorAll(".hero-slide");
-  const dotsContainer = document.querySelector(".hero-dots");
-
-  // Create dots
-  slides.forEach((_, i) => {
-    const dot = document.createElement("span");
-    if (i === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => showSlide(i));
-    dotsContainer.appendChild(dot);
-  });
-
-  const dots = document.querySelectorAll(".hero-dots span");
-  let currentSlide = 0;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
+  function showTestimonial(index) {
+    testimonials.forEach((t, i) => {
+      t.classList.remove("active");
       dots[i].classList.remove("active");
     });
-    slides[index].classList.add("active");
+    testimonials[index].classList.add("active");
     dots[index].classList.add("active");
-    currentSlide = index;
   }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
+  function nextTestimonial() {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    showTestimonial(currentIndex);
   }
 
-  setInterval(nextSlide, 6000); // 6s per slide
-
-  window.addEventListener("scroll", function() {
-  const header = document.querySelector(".header");
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
+  function prevTestimonial() {
+    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentIndex);
   }
-});
+
+  // Dot navigation
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      showTestimonial(index);
+    });
+  });
+
+  // Arrows
+  nextBtn.addEventListener("click", nextTestimonial);
+  prevBtn.addEventListener("click", prevTestimonial);
+
+  // Optional: Auto-slide every 6s
+  setInterval(nextTestimonial, 6000);
 
     </script>
     <!--End of script-->
