@@ -157,8 +157,11 @@ body {
 /* End of Header stylings */
 
 /* Hero section stylings */
-/* Hero Slider Base */
 .hero-slider {
+  --hero-section-gradient: rgba(0, 0, 0, 0.8);
+  background:
+    linear-gradient(var(--hero-section-gradient), var(--hero-section-gradient)),
+    url(./images/hero-bg.jpg);
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -202,17 +205,23 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  color: #16a085;
-  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: var(--color-black);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--color-primary-dark);
+  padding: 1rem 5rem;
+  text-align: center;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .hero-title {
+  color: var(--color-white);
+  text-transform: capitalize;
   font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1.2rem;
+  text-align: center;
+  margin: 3rem 0;
   line-height: 1.3;
 }
 
