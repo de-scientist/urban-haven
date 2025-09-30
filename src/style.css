@@ -575,20 +575,20 @@ body {
 }
 
 .space-title {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
   color: #333;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .space-description {
-  font-size: 0.95rem;
+  font-size: 1.4rem;
   color: #666;
   margin-bottom: 1rem;
 }
 
 .space-price {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #2c3e50;
 }
@@ -601,7 +601,7 @@ body {
   background: #0077b6;
   color: #fff;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.4rem;
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -674,22 +674,20 @@ body {
 }
 
 .reason-title {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 700;
   margin-bottom: 0.6rem;
   color: #333;
 }
 
 .reason-description {
-  font-size: 0.95rem;
+  font-size: 1.4rem;
   color: #555;
   line-height: 1.5;
 }
-
 /* End of reasons section styling */
 
 /* Team section stylings */
-
 .team-section {
   padding: 10rem 1rem;
   /*background-image: linear-gradient(
@@ -740,7 +738,7 @@ body {
   text-align: center;
   font-weight: 600;
   font-size: 1.4rem;
-  color: var(--color-grey);
+  color: #0066cc;
   margin-bottom: 1rem;
   text-transform: capitalize;
 }
@@ -752,7 +750,7 @@ body {
 .team-member-role {
   text-align: center;
   font-weight: bold;
-  color: var(--color-primary);
+  color: #0066cc;
 }
 
 .team-member-socials {
@@ -767,7 +765,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-primary);
+  background-color: #0066cc;
   width: var(--team-member-social-url-size);
   height: var(--team-member-social-url-size);
   font-size: 2.4rem;
