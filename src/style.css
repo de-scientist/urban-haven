@@ -1168,7 +1168,7 @@ body {
 .info-item p {
   color: #333;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 /* Contact Form */
@@ -1191,7 +1191,7 @@ body {
   padding: 0.9rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1207,14 +1207,14 @@ body {
   color: #fff;
   border: none;
   padding: 1rem 2rem;
-  font-size: 1rem;
+  font-size: 1.4rem;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .contact-form button:hover {
-  background: #0077b6;
+  background: indigo;
 }
 
 #form-status {
