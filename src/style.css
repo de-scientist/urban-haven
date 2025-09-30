@@ -679,11 +679,11 @@ body {
 /* Team section stylings */
 .team-section {
   padding: 10rem 1rem;
-  background-image: repeating-linear-gradient(
+  /*background-image: linear-gradient(
     to bottom right,
-    var(--color-grey-light),
-    var(--color-grey-lighter) 40px
-  );
+    var(--color-grey),
+    var(--color-primary) 1rem
+  );*/
 }
 
 .team-members-container {
@@ -753,7 +753,6 @@ body {
 /* End of team section stylings */
 
 /* blog section styling */
-/* Blog Section */
 .blog-section {
   padding: 5rem 2rem;
   background: #fafafa;
