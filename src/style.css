@@ -158,10 +158,7 @@ body {
 
 /* Hero section stylings */
 .hero-slider {
-  --hero-section-gradient: rgba(0, 0, 0, 0.8);
-  background:
-    linear-gradient(var(--hero-section-gradient), var(--hero-section-gradient)),
-    url(./images/hero-bg.jpg);
+  
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -516,14 +513,14 @@ body {
 }
 
 .service-title {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 800;
   margin: 1rem 0 0.5rem;
   color: #333;
 }
 
 .service-description {
-  font-size: 0.95rem;
+  font-size: 1.4rem;
   color: #555;
   padding: 0 1.2rem 1.5rem;
   line-height: 1.6;
@@ -746,6 +743,16 @@ body {
   color: var(--color-grey);
   margin-bottom: 1rem;
   text-transform: capitalize;
+}
+
+.team-member-bio {
+  text-align: center;
+}
+
+.team-member-role {
+  text-align: center;
+  font-weight: bold;
+  color: var(--color-primary);
 }
 
 .team-member-socials {
