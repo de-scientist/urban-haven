@@ -1063,14 +1063,16 @@
       </p>
     </footer>
     <!-- End of the footer -->
-
-    <!--Start of script-->
-    <script>
-  (function(){
-    emailjs.init("IcaDo3VicicKINrhX"); // Replace with your Public Key
+<!-- Start of Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  (function () {
+    emailjs.init("IcaDo3VicicKINrhX"); // Replace with your actual Public Key
   })();
 </script>
 
+<!-- AOS Animation -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
@@ -1079,158 +1081,157 @@
   });
 </script>
 
-    <script>
-function smartEmail() {
-  const email = "gitaumark502@gmail.com";
+<script>
+  /* -------------------------------
+      SMART EMAIL FUNCTION
+  --------------------------------*/
+  function smartEmail() {
+    const email = "gitaumark502@gmail.com";
+    const isMobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent);
 
-  //Simple check if user is on mobile
-  const isMobile = /iphone|ipad|ipod|Android/i.test(navigator.userAgent);
-
-  if (isMobile) {
-    //open default email app
-    window.location.href = 'mailto:${email}';
-  } else {
-    // Open Gmail in browser
-    window.open('https://mail.google.com/mail/?view=cm&to=${email}', "_blank");
+    if (isMobile) {
+      window.location.href = `mailto:${email}`; // ✅ fixed template literal
+    } else {
+      window.open(`https://mail.google.com/mail/?view=cm&to=${email}`, "_blank"); // ✅ fixed template literal
+    }
   }
-}
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const closeBtn = document.querySelector(".lightbox .close");
-const prevBtn = document.querySelector(".lightbox .prev");
-const nextBtn = document.querySelector(".lightbox .next");
 
-const galleryItems = document.querySelectorAll(".gallery-item img");
-let currentIndex = 0;
+  /* -------------------------------
+      LIGHTBOX GALLERY
+  --------------------------------*/
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox .close");
+  const prevImgBtn = document.querySelector(".lightbox .prev");
+  const nextImgBtn = document.querySelector(".lightbox .next");
+  const galleryItems = document.querySelectorAll(".gallery-item img");
+  let currentImageIndex = 0;
 
-// Open lightbox
-galleryItems.forEach((img, index) => {
-  img.addEventListener("click", e => {
-    e.preventDefault();
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
-    currentIndex = index;
-  });
-});
-
-// Close
-closeBtn.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-
-// Navigation
-function showImage(index) {
-  if (index < 0) index = galleryItems.length - 1;
-  if (index >= galleryItems.length) index = 0;
-  lightboxImg.src = galleryItems[index].src;
-  currentIndex = index;
-}
-
-prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
-nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
-
-// Swipe Support
-let startX = 0;
-lightbox.addEventListener("touchstart", e => {
-  startX = e.touches[0].clientX;
-});
-
-lightbox.addEventListener("touchend", e => {
-  let endX = e.changedTouches[0].clientX;
-  if (startX - endX > 50) {
-    showImage(currentIndex + 1); // swipe left
-  } else if (endX - startX > 50) {
-    showImage(currentIndex - 1); // swipe right
-  }
-});
-
-// Handle form submission
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  // Show loading state
-  const status = document.getElementById('form-status');
-  status.textContent = "Sending...";
-  status.style.color = "gray";
-
-  emailjs.sendForm('service_we80e3m', 'template_wu0tzs9', this)
-    .then(() => {
-      status.textContent = "✅ Message sent successfully!";
-      status.style.color = "green";
-      this.reset();
-    }, (err) => {
-      status.textContent = "❌ Failed to send message. Please try again.";
-      status.style.color = "red";
-      console.error(err);
+  if (lightbox && lightboxImg && galleryItems.length > 0) {
+    // Open Lightbox
+    galleryItems.forEach((img, index) => {
+      img.addEventListener("click", (e) => {
+        e.preventDefault();
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+        currentImageIndex = index;
+      });
     });
-});
 
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
+    // Close Lightbox
+    closeBtn?.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
 
-  const form = e.target;
+    // Show Image Function
+    function showImage(index) {
+      if (index < 0) index = galleryItems.length - 1;
+      if (index >= galleryItems.length) index = 0;
+      lightboxImg.src = galleryItems[index].src;
+      currentImageIndex = index;
+    }
+
+    prevImgBtn?.addEventListener("click", () => showImage(currentImageIndex - 1));
+    nextImgBtn?.addEventListener("click", () => showImage(currentImageIndex + 1));
+
+    // Swipe Support
+    let startX = 0;
+    lightbox.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    lightbox.addEventListener("touchend", (e) => {
+      let endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) showImage(currentImageIndex + 1);
+      else if (endX - startX > 50) showImage(currentImageIndex - 1);
+    });
+  }
+
+  /* -------------------------------
+      CONTACT FORM
+  --------------------------------*/
+  const contactForm = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
 
-  const firstName = form.firstName.value.trim();
-  const lastName = form.lastName.value.trim();
-  const email = form.email.value.trim();
-  const message = form.message.value.trim();
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-  if (!firstName || !lastName || !email || !message) {
-    status.textContent = "❌ Please fill in all fields before submitting.";
-    status.className = "error";
-    return;
+      const form = e.target;
+      const firstName = form.firstName.value.trim();
+      const lastName = form.lastName.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (!firstName || !lastName || !email || !message) {
+        status.textContent = "❌ Please fill in all fields before submitting.";
+        status.style.color = "red";
+        return;
+      }
+
+      status.textContent = "Sending...";
+      status.style.color = "gray";
+
+      emailjs
+        .sendForm("service_we80e3m", "template_wu0tzs9", form)
+        .then(() => {
+          status.textContent = "✅ Message sent successfully!";
+          status.style.color = "green";
+          form.reset();
+        })
+        .catch((err) => {
+          console.error(err);
+          status.textContent = "❌ Failed to send message. Please try again.";
+          status.style.color = "red";
+        });
+    });
   }
 
-  // Simulate success (replace with real backend or API later)
-  setTimeout(() => {
-    status.textContent = "✅ Thank you! Your message has been sent successfully.";
-    status.className = "success";
-    form.reset();
-  }, 600);
-});
- const testimonials = document.querySelectorAll(".testimonial");
+  /* -------------------------------
+      TESTIMONIALS SLIDER
+  --------------------------------*/
+  const testimonials = document.querySelectorAll(".testimonial");
   const dots = document.querySelectorAll(".dot");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
-  let currentIndex = 0;
+  const prevTestBtn = document.querySelector(".testimonial-nav .prev");
+  const nextTestBtn = document.querySelector(".testimonial-nav .next");
+  let testimonialIndex = 0;
 
-  function showTestimonial(index) {
-    testimonials.forEach((t, i) => {
-      t.classList.remove("active");
-      dots[i].classList.remove("active");
+  if (testimonials.length > 0) {
+    function showTestimonial(index) {
+      testimonials.forEach((t, i) => {
+        t.classList.toggle("active", i === index);
+        dots[i]?.classList.toggle("active", i === index);
+      });
+    }
+
+    function nextTestimonial() {
+      testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+      showTestimonial(testimonialIndex);
+    }
+
+    function prevTestimonial() {
+      testimonialIndex =
+        (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(testimonialIndex);
+    }
+
+    // Dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        testimonialIndex = index;
+        showTestimonial(index);
+      });
     });
-    testimonials[index].classList.add("active");
-    dots[index].classList.add("active");
+
+    // Arrows
+    nextTestBtn?.addEventListener("click", nextTestimonial);
+    prevTestBtn?.addEventListener("click", prevTestimonial);
+
+    // Auto Slide
+    setInterval(nextTestimonial, 6000);
   }
-
-  function nextTestimonial() {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
-  }
-
-  function prevTestimonial() {
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentIndex);
-  }
-
-  // Dot navigation
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      currentIndex = index;
-      showTestimonial(index);
-    });
-  });
-
-  // Arrows
-  nextBtn.addEventListener("click", nextTestimonial);
-  prevBtn.addEventListener("click", prevTestimonial);
-
-  // Optional: Auto-slide every 6s
-  setInterval(nextTestimonial, 6000);
-
-    </script>
-    <!--End of script-->
+</script>
+<!-- End of Script -->
 
   </body>
 </html>

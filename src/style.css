@@ -177,7 +177,6 @@ body {
 }
 
 .hero-slide.active {
-  background-color: #08102d;
   padding: 1rem;
   opacity: 1;
   z-index: 2;
@@ -193,6 +192,7 @@ body {
 
 /* Content */
 .hero-content {
+   background-color: rgba(8, 16, 45, .6);
   position: relative;
   z-index: 2;
   max-width: 800px;
